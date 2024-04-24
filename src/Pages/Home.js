@@ -57,7 +57,7 @@ handleProdByPrice();
                             <input id="electronics" type='checkbox' value={"Electronics"} onClick={handleCat4}/>
                         </div> */}
                         {filters.map((category,index)=>(
-                            <button onClick={()=>handleFilters(category)} className={`${selectedFilters?.includes(category)?"bg-orange-300":"bg-slate-300"} rounded p-4 mx-3`} key={index}>{category}</button>
+                            <button onClick={()=>handleFilters(category)} className={`${selectedFilters?.includes(category)?"bg-orange-300":"bg-slate-300"} rounded p-2 m-2 font-bold text-orange-500`} key={index}>{category}</button>
                         ))}
                     </div>
                 </div>
