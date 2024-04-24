@@ -1,16 +1,16 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Navbar from "../../busybuy1/src/Components/Navbar";
-import Login from "../../busybuy1/src/Pages/Login";
-import Register from "../../busybuy1/src/Pages/Register";
-import ErrorPage from "../../busybuy1/src/Pages/ErrorPage";
-import Home from "../../busybuy1/src/Pages/Home";
-import ResetPassword from "../../busybuy1/src/Pages/ResetPassword";
+import Navbar from "./Components/Navbar";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
+import ErrorPage from "./Pages/ErrorPage";
+import Home from "./Pages/Home";
+import ResetPassword from "./Pages/ResetPassword";
 import Cart from "./Pages/Cart";
 import PrivateRoute from "./Components/PrivateRoute";
 import Order from "./Pages/Order";
 import { Slide, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { useState, CSSProperties, useEffect } from "react";
+import { useEffect } from "react";
 import { useAuth } from "./Context/AuthContext";
 import Spinner from "./Components/Spinner";
 
