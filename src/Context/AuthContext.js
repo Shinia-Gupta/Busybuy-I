@@ -9,7 +9,8 @@ import {
   updateProfile
 } from "firebase/auth";
 import { firebaseAuth,googleProvider } from "../config/firebaseInit";
-
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../config/firebaseInit";
 //CREATING A CONTEXT API
 
 
@@ -19,12 +20,14 @@ const AuthContext=createContext();
 //2. create context provider
 export const AuthProvider=(props)=>{
     const [currentUser,setCurrentUser]=useState();
-    const [loading,setLoading]=useState(false);
+    const [loading,setLoading]=useState(true);
 
 //website's registration and login
     const registerWithSiteEmailPass=async(username,email,password)=>{
         const userCreds= await createUserWithEmailAndPassword(firebaseAuth,email,password);
         const user=userCreds.user;
+        // console.log(user);
+        await addDoc(collection(db,'users'),{userId:user.uid,email:user.email,cart:[],orders:[],cartAmount:0});
         return await updateProfile(user,{displayName:username});
     }
 
@@ -49,12 +52,14 @@ export const AuthProvider=(props)=>{
     }
 
     useEffect(()=>{
-        setLoading(true);
+        // setLoading(true);
         const unsubscribe=firebaseAuth.onAuthStateChanged(user=>{
             setCurrentUser(user);
-            setLoading(false);
+            // console.log(user,"-----user auth");
+            // setLoading(false);
         })
-        return unsubscribe;
+        // unsubscribe();
+        // return unsubscribe;
     },[]);
 
     return (
@@ -65,9 +70,10 @@ export const AuthProvider=(props)=>{
             logout,
             resetPwd,
             currentUser,
-            signinWithGoogle
+            signinWithGoogle,
+            loading,setLoading
         }}>
-            {!loading && props.children}
+            {props.children}
         </AuthContext.Provider>
     )
 }

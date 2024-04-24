@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../Context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 
 function Register() {
 
@@ -46,6 +46,8 @@ useEffect(()=>{
 })
 
     return (
+        <>       
+
         <form onSubmit={(e)=>handleSubmit(e)}>
                     <div className="flex flex-col justify-center items-center v-screen bg-slate-100">
             <h2 className='text-orange-500 text-3xl font-bold m-4'>New User SignUp</h2>
@@ -69,9 +71,8 @@ useEffect(()=>{
                 <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded">Signup</button>
             </div>
         </div>
-        <ToastContainer/>
         </form>
-
+        </>
     );
 }
 

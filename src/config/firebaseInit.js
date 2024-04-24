@@ -22,7 +22,7 @@ const app = initializeApp(firebaseConfig);
 //firebase instance
 const firebaseAuth=getAuth(app);
 
-//initializa firestore db and get a reference to that service
+//initialize firestore db and get a reference to that service
 const db = getFirestore(app);
 
 //instance of google auth provider
