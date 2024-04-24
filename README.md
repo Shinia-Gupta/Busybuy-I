@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# BusyBuy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+BusyBuy is an e-commerce web application built using React.js and Firebase. It allows users to browse products, add them to their cart, place orders, and much more. This project was developed as a part of a full-stack web development course to showcase various skills and technologies. 
+[LIVE APP](https://teal-baklava-4f8e44.netlify.app/)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- User authentication with Firebase Authentication, including Google OAuth integration.
+- Browse products with filtering and search functionality.
+- Add products to cart, manage cart items, and place orders.
+- Real-time updates on order status.
+- Admin panel to manage products, orders, and users.
+- Responsive design for seamless experience across devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: React.js, React Router, Tailwind CSS, React-Toastify, React-Spinners
+- **Backend**: Firebase Authentication, Firebase Firestore
+- **Authentication**: Firebase Authentication with Google OAuth
+- **Deployment**: Netlify Hosting
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/Shinia-Gupta/Busybuy-I.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   cd busybuy
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Set up Firebase:
 
-### `npm run eject`
+   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/).
+   - Enable Authentication and Firestore in your Firebase project.
+   - Add your Firebase configuration in a `.env` file:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+     ```env
+     REACT_APP_FIREBASE_API_KEY=your-api-key
+     REACT_APP_FIREBASE_AUTH_DOMAIN=your-auth-domain
+     REACT_APP_FIREBASE_PROJECT_ID=your-project-id
+     REACT_APP_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+     REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+     REACT_APP_FIREBASE_APP_ID=your-app-id
+     ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
